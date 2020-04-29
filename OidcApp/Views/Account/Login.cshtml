@@ -1,0 +1,13 @@
+﻿@model User;
+
+@{
+    ViewData["Title"] = "Login Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Login</h1>
+    <form method="post" asp-action="login" asp-controller="account" enctype="multipart/form-data">
+        <button class="btn-light" type="submit">Login for OAuth</button>
+    </form>
+    @*<button class="btn-light" asp-action="Login">Login</button>*@
+</div>

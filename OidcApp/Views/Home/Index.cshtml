@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var user = User.Identity as System.Security.Claims.ClaimsIdentity;;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="text-center">
+    <h1 class="display-4">Hi @user.FindFirst("name")?.Value</h1>
+    <div><img src="@user.FindFirst("picture")?.Value" /></div> 
+</div>
